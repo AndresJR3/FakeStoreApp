@@ -10,7 +10,7 @@ interface ProductService {
     @GET("products")
     suspend fun getProducts() : List<Product>
 
-    @GET("product/{id}")
+    @GET("products/{id}")
     suspend fun getProductById(@Path("id") id: Int) : Product
 
 

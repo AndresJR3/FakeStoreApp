@@ -8,4 +8,7 @@ data class Product(
     val price: Double,
     val rating: Rating,
     val title: String
-)
+){
+    val computedTitle get() = if (title.length > 11) "${title.substring(0, 11)}..." else title //recortará el titulo si son de más de 11 caracteres
+    val computedPrice get() = "$$price"
+}
